@@ -186,7 +186,7 @@ const startServer = async () => {
     reminderCron.start();
 
     // Iniciar servidor
-    app.listen(PORT, () => {
+    app.listen(PORT, "0.0.0.0", () => {
       consoleLogger.info(`🚀 Servidor corriendo en puerto ${PORT}`);
       consoleLogger.info(`📊 Entorno: ${process.env.NODE_ENV}`);
       consoleLogger.info(
