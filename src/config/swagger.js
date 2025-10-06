@@ -16,7 +16,7 @@ const options = {
     },
     servers: [
       {
-        url: "http://localhost:3001",
+        url: "https://backend-proper.onrender.com/",
         description: "Servidor de desarrollo",
       },
     ],
