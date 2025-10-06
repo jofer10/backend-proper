@@ -154,11 +154,13 @@ DB_PORT=5432
 3. **`sp_create_booking(slot_id, client_name, client_email)`** - Crear reserva
 4. **`sp_get_client_bookings(client_email)`** - Obtener reservas del cliente
 5. **`sp_admin_login(email, password)`** - Login de administrador
-6. **`sp_get_admin_bookings(advisor_id, status, from_date, to_date)`** - Obtener reservas para admin
-7. **`sp_resend_email(booking_id)`** - Reenviar email
-8. **`sp_update_booking_status(booking_id, status)`** - Actualizar estado de reserva
-9. **`sp_get_admin_stats()`** - Obtener estadísticas
-10. **`sp_get_email_logs(type, status)`** - Obtener logs de email
+6. **`sp_admin_verify(email)`** - Verificar admin por email (para tokens)
+7. **`sp_create_admin(email, password_hash)`** - Crear administrador (solo desarrollo)
+8. **`sp_get_admin_bookings(advisor_id, status, from_date, to_date)`** - Obtener reservas para admin
+9. **`sp_resend_email(booking_id)`** - Reenviar email
+10. **`sp_update_booking_status(booking_id, status)`** - Actualizar estado de reserva
+11. **`sp_get_admin_stats()`** - Obtener estadísticas
+12. **`sp_get_email_logs(type, status)`** - Obtener logs de email
 
 ### Características de los SP
 
