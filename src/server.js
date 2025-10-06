@@ -31,6 +31,9 @@ const ReminderCron = require("./cron/reminderCron");
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+// Configurar trust proxy para Render
+app.set("trust proxy", 1);
+
 // Crear directorio de logs si no existe
 const logsDir = path.dirname(process.env.LOG_FILE || "logs/app.log");
 if (!fs.existsSync(logsDir)) {
