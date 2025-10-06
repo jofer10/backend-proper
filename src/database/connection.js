@@ -51,13 +51,10 @@ const connectDB = async () => {
       database: process.env.DB_NAME || "booking_app",
       user: process.env.DB_USER || "postgres",
       password: process.env.DB_PASSWORD || "postgres123",
-      ssl:
-        process.env.NODE_ENV === "production"
-          ? { rejectUnauthorized: false }
-          : false,
+      ssl: { rejectUnauthorized: false },
       max: 20, // máximo de conexiones en el pool
       idleTimeoutMillis: 30000,
-      connectionTimeoutMillis: 2000,
+      connectionTimeoutMillis: 10000, // Aumentado a 10 segundos
     };
 
     pool = new Pool(config);
